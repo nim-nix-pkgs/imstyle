@@ -7,11 +7,19 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-imstyle-0_2_0.flake = false;
-  inputs.src-imstyle-0_2_0.ref   = "refs/tags/0.2.0";
-  inputs.src-imstyle-0_2_0.owner = "Patitotective";
-  inputs.src-imstyle-0_2_0.repo  = "ImStyle";
-  inputs.src-imstyle-0_2_0.type  = "github";
+  inputs.src-imstyle-0_3_4.flake = false;
+  inputs.src-imstyle-0_3_4.ref   = "refs/tags/0.3.4";
+  inputs.src-imstyle-0_3_4.owner = "Patitotective";
+  inputs.src-imstyle-0_3_4.repo  = "ImStyle";
+  inputs.src-imstyle-0_3_4.type  = "github";
+  
+  inputs."nimgl".owner = "nim-nix-pkgs";
+  inputs."nimgl".ref   = "master";
+  inputs."nimgl".repo  = "nimgl";
+  inputs."nimgl".dir   = "1_3_2";
+  inputs."nimgl".type  = "github";
+  inputs."nimgl".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."nimgl".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   inputs."chroma".owner = "nim-nix-pkgs";
   inputs."chroma".ref   = "master";
@@ -32,13 +40,13 @@
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-imstyle-0_2_0"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-imstyle-0_3_4"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-imstyle-0_2_0";
+    src  = deps."src-imstyle-0_3_4";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
