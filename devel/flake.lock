@@ -213,11 +213,11 @@
       },
       "locked": {
         "dir": "0_3_4",
-        "lastModified": 1656303215,
-        "narHash": "sha256-hELd5M18oh4+DrfOlurrYkVLiEhh6UXnw91HcInZtv4=",
+        "lastModified": 1659478392,
+        "narHash": "sha256-pTrGTxDH97MhzaRWuZ8nN6/3i7zrgAPEe1UabufSldc=",
         "owner": "nim-nix-pkgs",
         "repo": "niprefs",
-        "rev": "1c30fe0bdd37199102278c5750d1f146ad864ea6",
+        "rev": "6803fa736ccf4a72a996d10968c89506caa7fd51",
         "type": "github"
       },
       "original": {
@@ -246,7 +246,7 @@
         "flakeNimbleLib": "flakeNimbleLib",
         "niprefs": "niprefs",
         "nixpkgs": "nixpkgs",
-        "src-imstyle-0_3_2": "src-imstyle-0_3_2"
+        "src-imstyle-devel": "src-imstyle-devel"
       }
     },
     "serialization": {
@@ -368,19 +368,19 @@
         "type": "github"
       }
     },
-    "src-imstyle-0_3_2": {
+    "src-imstyle-devel": {
       "flake": false,
       "locked": {
-        "lastModified": 1654820980,
-        "narHash": "sha256-Tn/kuSVc/n7qYt6iVt9advZKXXy8o+3wXhnMyPuhMh4=",
+        "lastModified": 1654806319,
+        "narHash": "sha256-ZftAQhXcdr+fK0BeUks/vYYoknha6XIysaMS3J6/i/0=",
         "owner": "Patitotective",
         "repo": "ImStyle",
-        "rev": "f52c60047d9f8c540af925873999d6be121f0b4a",
+        "rev": "836a804df4e62f31d18192e9d6b41ef539efca5a",
         "type": "github"
       },
       "original": {
         "owner": "Patitotective",
-        "ref": "refs/tags/0.3.2",
+        "ref": "refs/heads/devel",
         "repo": "ImStyle",
         "type": "github"
       }
